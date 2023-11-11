@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import * as React from "react";
 
 import { siteConfig } from "@/config/site";
-import { Icons } from "@/components/Icons";
 import { cn } from "@/lib/utils";
+
+import { Icons } from "@/components/Icons";
 
 export default function MainNav() {
   const pathname = usePathname();

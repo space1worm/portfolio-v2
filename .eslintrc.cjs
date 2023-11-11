@@ -38,6 +38,7 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "unused-imports/no-unused-imports": "warn",
     "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/no-unused-vars": [
       "error",
       {

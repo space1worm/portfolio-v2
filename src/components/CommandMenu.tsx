@@ -2,11 +2,13 @@
 
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
-import { DialogProps } from "@radix-ui/react-dialog";
+import type { DialogProps } from "@radix-ui/react-dialog";
 import { CircleIcon, FileIcon, LaptopIcon, MoonIcon, SunIcon } from "@radix-ui/react-icons";
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 
 import { docsConfig } from "@/config/docs";
+import { cn } from "@/lib/utils";
+
 import { Button } from "@/components/ui/button";
 import {
   CommandDialog,
@@ -17,14 +19,13 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command";
-import { cn } from "@/lib/utils";
 
 export default function CommandMenu({ ...props }: DialogProps) {
   const router = useRouter();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const { setTheme } = useTheme();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();

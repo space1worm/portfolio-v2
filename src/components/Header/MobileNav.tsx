@@ -1,20 +1,21 @@
 "use client";
 
-import Link, { LinkProps } from "next/link";
+import Link, { type LinkProps } from "next/link";
 import { useRouter } from "next/navigation";
 import { ViewVerticalIcon } from "@radix-ui/react-icons";
-import * as React from "react";
+import { Fragment, useState } from "react";
 
 import { docsConfig } from "@/config/docs";
 import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
+
 import { Icons } from "@/components/Icons";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { cn } from "@/lib/utils";
 
 export default function MobileNav() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -49,7 +50,7 @@ export default function MobileNav() {
                 <h4 className="font-medium">{item.title}</h4>
                 {item?.items?.length &&
                   item.items.map((item) => (
-                    <React.Fragment key={item.href}>
+                    <Fragment key={item.href}>
                       {!item.disabled &&
                         (item.href ? (
                           <MobileLink
@@ -62,7 +63,7 @@ export default function MobileNav() {
                         ) : (
                           item.title
                         ))}
-                    </React.Fragment>
+                    </Fragment>
                   ))}
               </div>
             ))}
