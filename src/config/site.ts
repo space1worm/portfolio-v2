@@ -1,11 +1,11 @@
 export const siteConfig = {
-  name: "shadcn/ui",
-  url: "https://ui.shadcn.com",
-  ogImage: "https://ui.shadcn.com/og.jpg",
-  description: "Beautifully designed components built with Radix UI and Tailwind CSS.",
+  name: "space1worm",
+  url: "https://github.com/space1worm",
+  ogImage: "https://avatars.githubusercontent.com/u/84189246?v=4",
+  description: "Portfolio of space1worm",
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn-ui/ui",
+    linkedIn: "https://www.linkedin.com/in/irakli-kverenchkhiladze-830561209/",
+    github: "https://github.com/space1worm",
   },
 };
 
