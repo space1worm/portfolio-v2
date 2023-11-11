@@ -3,13 +3,13 @@ module.exports = {
   env: { browser: true, es2020: true },
   plugins: ["import", "eslint-plugin-jsx-a11y", "unused-imports"],
   extends: [
-    "next/core-web-vitals",
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/recommended",
+    "next/core-web-vitals",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
